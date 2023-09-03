@@ -1,0 +1,93 @@
+@use '../../../styles/abstract/colors' as *;
+
+.container {
+    flex: 1;
+    margin: 20px;
+    width: calc(100% - 20px);
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2em;
+        margin-left: 0.5em;
+        flex-wrap: wrap-reverse;
+
+        .quote {
+            font-size: 14px;
+            font-weight: 200;
+            margin-left: -9px;
+            @media (max-width: 600px) {
+                display: none;
+            }
+        }
+
+        .date {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .icon {
+                margin-right: 2px;
+            }
+        }
+    }
+
+    .banner_container {
+        width: 40px;
+        height: 30%;
+        background-color: #ffffff;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .notes_form {
+        margin: 20px;
+
+        .title_box {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2%;
+
+            .label {
+                margin-bottom: 1%;
+            }
+        }
+
+        .editor_box {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3%;
+        }
+    }
+
+    .banner_box {
+        position: absolute;
+        top: 30%;
+        right: 10px;
+        position: fixed;
+    }
+
+    .btn_box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-right: 20px;
+
+        .btn {
+            margin: 2px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        width: 90%; // Full width in mobile view
+        height: 87%;
+        position: absolute;
+        top: 20; // Adjust based on your top bar's height
+        left: 0;
+    }
+}

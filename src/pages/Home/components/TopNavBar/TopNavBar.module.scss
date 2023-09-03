@@ -1,0 +1,76 @@
+@use '../../../../styles/abstract/colors' as *;
+
+.topNavbar_container {
+    width: 100%;
+    height: 50px;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    .logo {
+        display: flex;
+        justify-content: center;
+
+        .logo_img {
+            width: 90px;
+            height: 80px;
+            background-image: url(../../../../assets/note_logo.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .logo_text {
+            color: $gray-600;
+            font-weight: bolder;
+            align-self: center;
+            margin-left: -12px;
+            font-family: 'Courier New', Courier, monospace;
+
+            &::first-letter {
+                font-size: 30px;
+                color: $primary-blue;
+            }
+
+            .sub_string {
+                font-size: 30px;
+                color: $primary-yellow;
+            }
+
+            @media (max-width: 650px) {
+                display: none;
+            }
+        }
+
+        .menu_icons {
+            margin: 10px;
+            margin-right: -12px;
+            cursor: pointer;
+
+            .toggleIcon {
+                display: none;
+                color: $primary-blue;
+            }
+
+            .closeIcon {
+                color: $primary-danger;
+                display: none;
+            }
+
+            @media (max-width: 650px) {
+                .toggleIcon,
+                .closeIcon {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .btn_container {
+        .createBth {
+            margin: 5px;
+        }
+    }
+}

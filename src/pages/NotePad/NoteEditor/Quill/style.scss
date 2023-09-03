@@ -1,0 +1,12 @@
+.editor-input {
+    height: 250px;
+    width: 100%;
+}
+
+.quill .ql-toolbar {
+    position: sticky;
+    scroll-margin-top: 100px;
+    background-color: #ffffff;
+    top: 0px;
+    z-index: 2;
+}

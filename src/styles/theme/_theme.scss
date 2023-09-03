@@ -1,0 +1,156 @@
+@use '../abstract/colors' as *;
+
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#root {
+    height: 100vh;
+    background-color: #f3f1f7;
+}
+
+.tox-statusbar__branding svg {
+    display: none !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+.light {
+    .primary-background {
+        background-color: $primary-light-bg;
+    }
+
+    .secondary-background {
+        background-color: $secondary-light-bg;
+    }
+
+    .into-text {
+        color: $into-light-text;
+    }
+
+    .into-lg-text {
+        color: black;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .into-sm-text {
+        font-size: 10px;
+        color: $into-light-text;
+    }
+
+    .MuiInput-input {
+        background-color: $primary-light-bg;
+    }
+
+    .MuiInput-variantOutlined {
+        --Input-focusedHighlight: unset;
+    }
+}
+
+.dark {
+    .primary-background {
+        background-color: $primary-dark-bg;
+    }
+
+    .secondary-background {
+        background-color: $secondary-dark-bg;
+    }
+
+    .into-text {
+        color: $into-dark-text;
+    }
+
+    .into-lg-text {
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .into-sm-text {
+        font-size: 10px;
+        color: $into-dark-text;
+    }
+
+    .tox-tinymce {
+        border: 1px solid $primary-dark-bg;
+    }
+
+    .tox:not(.tox-tinymce-inline) .tox-editor-header {
+        background-color: $secondary-dark-bg;
+    }
+
+    .tox-editor-header {
+        background-color: $secondary-dark-bg;
+
+        .tox-menubar {
+            background-color: $secondary-dark-bg;
+
+            .tox-mbtn {
+                color: $primary_gray;
+            }
+        }
+
+        .tox-toolbar__primary {
+            background-color: $secondary-dark-bg;
+
+            .tox-tbtn--bespoke {
+                background-color: $primary_gray;
+            }
+
+            .tox-tbtn svg {
+                fill: $primary_gray;
+            }
+        }
+    }
+
+    .tox-statusbar__text-container {
+        background-color: $secondary-dark-bg;
+
+        .tox-statusbar__wordcount {
+            color: $white-000;
+        }
+    }
+
+    .tox-statusbar__path-item {
+        color: $white-000 !important;
+    }
+
+    .tox-toolbar-overlord {
+        background-color: $primary-dark-bg !important;
+    }
+
+    .tox-statusbar {
+        background-color: $primary_gray !important;
+        border-top: 1px solid $primary-dark-bg !important;
+    }
+
+    .tox-statusbar__resize-handle svg {
+        fill: $white-000 !important;
+    }
+
+    .tox-edit-area__iframe {
+        background-color: $secondary-dark-bg !important;
+        color: $white-000 !important;
+    }
+
+    .MuiInput-input {
+        background-color: $secondary-dark-bg;
+        color: $white-000;
+
+        &::placeholder {
+            color: $primary_gray;
+        }
+    }
+
+    .MuiInput-variantOutlined {
+        background-color: $secondary-dark-bg;
+        border: 1px solid $primary-dark-bg !important;
+        border-color: $primary-dark-bg !important;
+        --Input-focusedHighlight: unset;
+    }
+}
